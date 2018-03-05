@@ -1,6 +1,5 @@
 +++
 description = "Кто мы такие и что мы хотим"
-draft = true
 title = "О нас"
 type = "page"
 
