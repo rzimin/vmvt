@@ -1,0 +1,67 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero">
+    <h1>{{.Title}}</h1>
+    <p>{{.Description}}</p>
+  </div>
+  <div id="action-buttons">
+    <a class="button outline big" href="https://www.facebook.com/allyoucandointhai/">Мы в фейсбук</a> <a class="button outline big" href="https://www.instagram.com/vsemozhnovtae/">Мы в Инстаграм</a>
+    <p>Заходите к нам на фейсбук и инстаграм. У нас интересно.</p>
+  </div>
+  <div class="message focus" data-component="message"> <span class="close small"></span>
+    Все что написано на этом сайте является больной фантазией его авторов и попыткой поделиться с вами своим опытом и знанниями
+  </div>
+	
+  <figure>
+	<div class="video-container">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/el8Tm4jCoB0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+	</div>
+	<figcaption>Анонс 4 сезона #всеможновтае</figcaption>
+  </figure>
+	
+
+  <div id="components">
+  <h2>Последнее из нашего блога</h2>
+    <div class="row gutters">
+      {{ range where .Data.Pages "Section" "blog"}}
+      <div class="col col-4 item">
+        <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        <p>{{ .Params.description }}</p>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+
+	
+  <div id="kube-features">
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Блог" height="48" src="/img/kube/icon-typo.png" width="48">
+        </figure>
+        <h3>Блог</h3>
+        <p>Читайте наши публикации в блоге на этом сайте. Тут будет информация, которая не погрязнет в ленте фейсбука.</p><p><a class="button small" href="http://vmvt.club/blog">Скорее читать</a></p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Фейсбук" height="48" src="/img/kube/icon-facebook.png" width="48">
+        </figure>
+        <h3>Фейсбук</h3>
+        <p>Для тех, кто пользуется феусбуком, у нас также есть страничка. Там можно видеть наши чекины и комментировать.</p><p><a class="button small" href="https://www.facebook.com/allyoucandointhai/">Ура, фейсбук!</a></p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Minimalism" height="48" src="/img/kube/icon-instagram.png" width="48">
+        </figure>
+        <h3>Инстаграм</h3>
+        <p>Мы размещаем кучу интересных картинок в нашем инстаграм. Все самые красивые картинки и видео будут именно там.</p><p><a class="button small" href="https://www.instagram.com/vsemozhnovtae/">Хочу посмотреть</a></p>
+      </div>
+    </div>
+ </div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

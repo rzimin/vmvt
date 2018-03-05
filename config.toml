@@ -1,0 +1,18 @@
+baseURL = "/"
+languageCode = "ru-ru"
+title = "# Все можно в Тае"
+theme = "kube"
+description = "test"
+Paginate = 4
+[Params]
+  RSSLink = "/index.xml"
+  author = "команда Все можно в Тае" # add your company name
+  github = "" # add your github profile name
+  twitter = "" # add your twitter profile
+  email = "myemail@myaddress.xxx"
+  instagram = "https://www.instagram.com/vsemozhnovtae/"
+
+[[menu.main]]
+    name = "Блог"
+    weight = -100
+    url = "/blog/"
