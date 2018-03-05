@@ -1,6 +1,6 @@
 language: go
 go:
-- 1.4
+- 1.10
 install:
 - go get github.com/spf13/hugo
 script: hugo -b http://vmvt.club
